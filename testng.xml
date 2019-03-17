@@ -6,8 +6,9 @@
         <listener class-name="com.usf.ExtentListenerAdapter"></listener>
     </listeners>
 
-    <test name="Meritage Test">
+    <test name="Google Test">
         <classes>
+            <class name="com.tests.withPages.GoogleTest"/>
             <class name="com.tests.TheInternetTest"/>
         </classes>
     </test>
