@@ -1,7 +1,10 @@
 package com.tests;
 
+import com.tests.withPages.GoogleTest;
 import com.tests.withPages.theInternet.HomePage;
 import org.openqa.selenium.By;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -11,8 +14,9 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 
-public class TheInternetTest {
+public class TheInternetTest extends BaseUITest{
 
+    private final Logger log = LoggerFactory.getLogger(TheInternetTest.class);
 
     @Test(dataProvider = "Authentication", description = "This is not a valid test. This is used for demonstration of the Selenide framework.", groups = "Hemant")
     public void invalidAuthenticationWithRandomData(String name, String password) {
@@ -70,16 +74,28 @@ public class TheInternetTest {
 
     @Test
     public void validAuthentication() {
+        String url = "http://the-internet.herokuapp.com";
+        String userName = "tomsmith";
+        String password = "SuperSecretPassword!";
+        String successMessage = "You logged into a secure area!";
+        open(url);
+        log.info("Navigating to the url {}", url);
 
-
-        open("http://the-internet.herokuapp.com");
         $(By.linkText("Form Authentication")).click();
-        $("#username").setValue("tomsmith");
-        $("#password").setValue("SuperSecretPassword!");
+        log.info("Clicking on Form Authentication");
+
+        $("#username").setValue(userName);
+        log.info("Setting username as {}", userName);
+
+        $("#password").setValue(password);
+        log.info("Setting password as {}", password);
+
+
         $(By.xpath("//i[@class='fa fa-2x fa-sign-in']")).click();
+        log.info("Clicked on SignIn");
 
-        $("#flash").shouldHave(text("You logged into a secure area!"));
-
+        $("#flash").shouldHave(text(successMessage));
+        log.info("Success message {} is displayed", successMessage);
     }
 
 
