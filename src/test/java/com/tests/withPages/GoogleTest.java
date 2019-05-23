@@ -22,7 +22,7 @@ public class GoogleTest extends BaseUITest {
         SearchResultsPage results = page.searchFor(searchKeyword);
 
         results.checkResultsSize(1);
-        results.getResults().get(0).shouldHave(text("Selenide: concise UI tests in JavaTBD"));
-        log.info("The keyword {} exists in Selenide: concise UI tests in JavaTBD",searchKeyword);
+        results.getResults().get(0).shouldHave(text("Selenide: concise UI tests in Java"));
+        log.info("The search text was {} exists in Selenide: concise UI tests in Java",searchKeyword);
     }
 }

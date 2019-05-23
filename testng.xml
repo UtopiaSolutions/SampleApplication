@@ -10,6 +10,7 @@
         <classes>
             <class name="com.tests.withPages.GoogleTest"/>
             <class name="com.tests.TheInternetTest"/>
+            <class name="com.fakeUsers.tests.CreateUserAPITest"/>
         </classes>
     </test>
 </suite>

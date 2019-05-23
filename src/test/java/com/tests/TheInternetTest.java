@@ -26,7 +26,7 @@ public class TheInternetTest extends BaseUITest{
         homePage.moveToFormAuthenticationPage()
                 .loginWithUserNameAndPassword(name, password)
                 .getSuccessMessage()
-                .shouldHave(text("You logged into a secure area!")); //Sample of Declarative Assertion using Selenide (USF-7)
+                .shouldHave(text("Your username is invalid!")); //Sample of Declarative Assertion using Selenide (USF-7)
     }
 
     @DataProvider(name = "Authentication")
@@ -109,7 +109,7 @@ public class TheInternetTest extends BaseUITest{
         $("#password").setValue("SuperSecretPassword!");
         $(By.xpath("//i[@class='fa fa-2x fa-sign-in']")).click();
 
-        $("#flash").shouldHave(text("You logged into a secure area! blah blah blah"));
+        $("#flash").shouldHave(text("You logged into a secure area!"));
 
 
     }
