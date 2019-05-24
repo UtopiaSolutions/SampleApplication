@@ -1,6 +1,5 @@
 package com.tests;
 
-import com.tests.withPages.GoogleTest;
 import com.tests.withPages.theInternet.HomePage;
 import org.openqa.selenium.By;
 import org.slf4j.Logger;
