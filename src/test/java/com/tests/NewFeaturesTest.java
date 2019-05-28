@@ -19,8 +19,9 @@ public class NewFeaturesTest extends BaseUITest {
         System.out.println();
         System.out.println("<------------------------------------------->");
         System.out.println();
-        System.out.println("CORE METADATA-LOCATION");
+        System.out.println("METADATA-LOCATION");
         System.out.println(properties.getConfigValue("metadata-location"));
+        System.out.println();
         System.out.println("<------------------------------------------->");
 
     }
