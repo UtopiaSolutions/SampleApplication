@@ -1,7 +1,6 @@
 package com.fakeUsers.tests;
 
 import com.fakeUsers.util.HelperMethods;
-import com.usf.TestClassJeff;
 import com.usf.rest.RestUtil;
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
@@ -36,7 +35,6 @@ public class CreateUserAPITest {
     public void statusCodeTest() {
         //Verify the http response status returned. Check Status Code is 200?
         HelperMethods.checkStatusIs200(res);
-        TestClassJeff Jeff = new TestClassJeff();
     }
 
 

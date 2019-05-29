@@ -1,6 +1,7 @@
 package com.tests;
 
 import com.usf.TestLogHelper;
+import com.usf.utils.ConfigurationReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.ITestResult;
@@ -11,6 +12,7 @@ import org.testng.annotations.BeforeTest;
 
 
 public class BaseUITest {
+    protected ConfigurationReader properties = new ConfigurationReader("client_config");
 
     private final Logger log = LoggerFactory.getLogger(BaseUITest.class);
 
@@ -28,7 +30,13 @@ public class BaseUITest {
     @BeforeMethod
     public void beforeMethod(ITestResult result) throws Exception {
         TestLogHelper.startTestLogging(result.getMethod().getMethodName());
+<<<<<<< HEAD
         log.info("Execution of test method {} has started....", result.getMethod().getTestClass() + "." + result.getMethod().getMethodName());
+=======
+
+        log.info("Execution of test {} has started....", result.getMethod().getMethodName());
+
+>>>>>>> b2562a870878701cace8a0981c03904f884bb117
     }
 
     @AfterMethod
