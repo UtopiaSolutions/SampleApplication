@@ -20,7 +20,7 @@
         <dependency>
             <groupId>com.github.UtopiaSolutions</groupId>
             <artifactId>UtopiaSolutionsFWCore</artifactId>
-            <version>3c7832e1ce</version>
+            <version>299991ca79</version>
         </dependency>
     </dependencies>
 
