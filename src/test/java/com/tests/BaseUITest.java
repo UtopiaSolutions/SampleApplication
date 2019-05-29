@@ -6,29 +6,47 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
+
 
 public class BaseUITest {
     protected ConfigurationReader properties = new ConfigurationReader("client_config");
 
     private final Logger log = LoggerFactory.getLogger(BaseUITest.class);
 
+    @BeforeTest
+    public void beforeTest() {
+        log.debug("Starting test class...");
+    }
+
+    @AfterTest
+    public void afterTest() {
+        log.debug("Ending test class...");
+        TestLogHelper.stopTestLogging();
+    }
+
     @BeforeMethod
     public void beforeMethod(ITestResult result) throws Exception {
         TestLogHelper.startTestLogging(result.getMethod().getMethodName());
+<<<<<<< HEAD
+        log.info("Execution of test method {} has started....", result.getMethod().getTestClass() + "." + result.getMethod().getMethodName());
+=======
 
         log.info("Execution of test {} has started....", result.getMethod().getMethodName());
 
+>>>>>>> b2562a870878701cace8a0981c03904f884bb117
     }
 
     @AfterMethod
     public void afterMethod(ITestResult testResult) {
         try {
             if (!testResult.isSuccess()) {
-                log.error("Test has failed",testResult.getThrowable());
+                log.error("Test method has failed",testResult.getThrowable());
             }
 
-            log.info("Test {} has passed", testResult.getMethod().getMethodName());
+            log.info("Test method {} has passed", testResult.getMethod().getMethodName());
         } finally {
             TestLogHelper.stopTestLogging();
         }

@@ -13,7 +13,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 
-public class TheInternetTest extends BaseUITest{
+public class TheInternetTest extends BaseUITest {
 
     private final Logger log = LoggerFactory.getLogger(TheInternetTest.class);
 
