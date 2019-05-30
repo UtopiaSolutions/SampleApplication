@@ -30,13 +30,7 @@ public class BaseUITest {
     @BeforeMethod
     public void beforeMethod(ITestResult result) throws Exception {
         TestLogHelper.startTestLogging(result.getMethod().getMethodName());
-<<<<<<< HEAD
         log.info("Execution of test method {} has started....", result.getMethod().getTestClass() + "." + result.getMethod().getMethodName());
-=======
-
-        log.info("Execution of test {} has started....", result.getMethod().getMethodName());
-
->>>>>>> b2562a870878701cace8a0981c03904f884bb117
     }
 
     @AfterMethod
