@@ -21,6 +21,7 @@
             <groupId>com.github.UtopiaSolutions</groupId>
             <artifactId>UtopiaSolutionsFWCore</artifactId>
             <version>5fd8bdec20</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 
