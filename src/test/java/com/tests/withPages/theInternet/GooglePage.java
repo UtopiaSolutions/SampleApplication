@@ -1,9 +1,8 @@
-package com.tests.withPages;
+package com.tests.withPages.theInternet;
 
 import com.codeborne.selenide.SelenideElement;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.testng.Reporter;
 
 import static com.codeborne.selenide.Selenide.page;
 

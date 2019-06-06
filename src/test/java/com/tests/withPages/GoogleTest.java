@@ -1,5 +1,7 @@
 package com.tests.withPages;
 
+import com.tests.withPages.theInternet.GooglePage;
+import com.tests.withPages.theInternet.SearchResultsPage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
