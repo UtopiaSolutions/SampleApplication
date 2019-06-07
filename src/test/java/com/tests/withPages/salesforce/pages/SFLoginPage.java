@@ -23,7 +23,7 @@ public class SFLoginPage {
         passwordText.setValue(password);
         loginBtn.click();
 
-        Reporter.log("Entered username " + username + " and "  + " password " + password);
+        Reporter.log("Entered username " + username + " and "  + " password  ********");
         return this;
     }
 

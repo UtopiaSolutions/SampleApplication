@@ -4,6 +4,7 @@ import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Reporter;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.page;
@@ -24,6 +25,7 @@ public class SFCommon {
             e.printStackTrace();
         }
         contactsLink.sendKeys(Keys.ENTER);
+        Reporter.log("Clicked Contacts Tab");
         return page(SFContactsPage.class);
     }
 
