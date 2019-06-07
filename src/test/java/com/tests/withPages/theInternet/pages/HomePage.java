@@ -1,4 +1,4 @@
-package com.tests.withPages.theInternet;
+package com.tests.withPages.theInternet.pages;
 
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.support.FindBy;

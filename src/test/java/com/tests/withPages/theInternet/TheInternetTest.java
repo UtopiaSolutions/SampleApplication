@@ -1,6 +1,6 @@
-package com.tests;
+package com.tests.withPages.theInternet;
 
-import com.tests.withPages.theInternet.HomePage;
+import com.tests.withPages.theInternet.pages.HomePage;
 import org.openqa.selenium.By;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

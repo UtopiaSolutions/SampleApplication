@@ -9,6 +9,7 @@
     <test name="Google Test">
         <classes>
             <class name="com.tests.withPages.salesforce.SalesForceDemoTest"/>
+            <class name="com.tests.withPages.theInternet.TheInternetTest"/>
         </classes>
     </test>
 </suite>

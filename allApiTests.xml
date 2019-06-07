@@ -8,8 +8,8 @@
 
     <test name="Fake Users">
         <classes>
-            <class name="com.fakeUsers.tests.CreateUserAPITest"/>
-            <class name="com.fakeUsers.tests.ListUsersAPITest"/>
+            <class name="com.tests.fakeUsers.CreateUserAPITest"/>
+            <class name="com.tests.fakeUsers.ListUsersAPITest"/>
         </classes>
     </test>
 </suite>
