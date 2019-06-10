@@ -53,7 +53,7 @@ public class SalesForceDemoTestPASS extends BaseUITest {
                 "Chicago",
                 "IL",
                 "60601",
-                DataConverter.getBirthdayValue("<AUTO_DOB|35_45"))
+                DataConverter.getBirthdayValue("<AUTO_DOB|35_45>"))
                 .saveContact();
 
         commonPage.globalSearch(DataConverter.getKeywordValue("<FullName>"));
