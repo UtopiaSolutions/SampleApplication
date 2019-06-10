@@ -22,4 +22,8 @@ public class SFHomePage {
         return page(SFCommon.class);
     }
 
+    public SFNewContactPage moveToNewContactPage() {
+        return page(SFNewContactPage.class);
+    }
+
 }

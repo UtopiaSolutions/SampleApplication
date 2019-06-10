@@ -1,5 +1,6 @@
 package com.tests.withPages.salesforce.pages;
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -19,28 +20,20 @@ public class SFCommon {
     private SelenideElement globalSearch;
 
     public SFContactsPage clickContactsLink(){
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        $(contactsLink).waitUntil(Condition.appear, 3000);
+
         contactsLink.sendKeys(Keys.ENTER);
         Reporter.log("Clicked Contacts Tab");
         return page(SFContactsPage.class);
     }
 
     public void globalSearch(String searchVal) {
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        $(globalSearch).waitUntil(Condition.appear, 3000);
+
         globalSearch.setValue(searchVal).sendKeys(Keys.ENTER);
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+
+        $(By.linkText(searchVal)).waitUntil(Condition.appear, 3000);
         $(By.linkText(searchVal)).click();
+        Reporter.log("Clicked " + searchVal);
     }
 }

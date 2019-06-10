@@ -76,7 +76,7 @@ public class TheInternetTest extends BaseUITest {
     public void validAuthentication() {
         String url = "http://the-internet.herokuapp.com";
         String userName = "tomsmith";
-        String password = "SuperSecretPassword!";
+        String password = "password223";
         String successMessage = "You logged into a secure area!";
         open(url);
         log.info("Navigating to the url {}", url);

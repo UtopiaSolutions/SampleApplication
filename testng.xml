@@ -8,8 +8,8 @@
 
     <test name="Google Test">
         <classes>
-            <class name="com.tests.withPages.salesforce.SalesForceDemoTest"/>
-            <class name="com.tests.withPages.theInternet.TheInternetTest"/>
+            <class name="com.tests.withPages.salesforce.SalesForceDemoTestPASS"/>
+            <class name="com.tests.withPages.salesforce.SalesForceDemoTestFAIL"/>
         </classes>
     </test>
 </suite>

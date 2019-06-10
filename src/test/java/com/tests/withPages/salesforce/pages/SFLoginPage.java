@@ -4,6 +4,8 @@ import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Reporter;
 
+import static com.codeborne.selenide.Selenide.page;
+
 public class SFLoginPage {
 
 
@@ -26,5 +28,11 @@ public class SFLoginPage {
         Reporter.log("Entered username " + username + " and "  + " password  ********");
         return this;
     }
+
+    public SFCommon moveToCommonPage() {
+        Reporter.log("Redirecting to SalesForce Common Page.");
+        return page(SFCommon.class);
+    }
+
 
 }
