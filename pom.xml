@@ -20,8 +20,12 @@
         <dependency>
             <groupId>com.github.UtopiaSolutions</groupId>
             <artifactId>UtopiaSolutionsFWCore</artifactId>
+<<<<<<< HEAD
             <version>5fd8bdec20</version>
             <scope>test</scope>
+=======
+            <version>973139d364</version>
+>>>>>>> Forced FW Jar Update
         </dependency>
     </dependencies>
 
