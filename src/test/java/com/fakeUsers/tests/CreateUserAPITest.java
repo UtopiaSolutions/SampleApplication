@@ -1,6 +1,5 @@
 package com.fakeUsers.tests;
 
-import com.fakeUsers.util.HelperMethods;
 import com.usf.rest.RestUtil;
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
@@ -9,6 +8,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
+import test.HelperMethods;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.notNullValue;

@@ -1,6 +1,7 @@
 package com.tests;
 
 import org.testng.annotations.Test;
+import test.BaseUITest;
 
 
 public class NewFeaturesTest extends BaseUITest {

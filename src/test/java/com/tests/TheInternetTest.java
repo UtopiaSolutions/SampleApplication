@@ -6,6 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+import test.CoreTest;
 
 import static com.codeborne.selenide.Condition.disappears;
 import static com.codeborne.selenide.Condition.text;
@@ -13,7 +14,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 
-public class TheInternetTest extends BaseUITest {
+public class TheInternetTest extends CoreTest {
 
     private final Logger log = LoggerFactory.getLogger(TheInternetTest.class);
 

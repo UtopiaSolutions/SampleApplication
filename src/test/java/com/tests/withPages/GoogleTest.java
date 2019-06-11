@@ -1,9 +1,10 @@
 package com.tests.withPages;
 
-import com.tests.BaseUITest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
+import test.BaseUITest;
+
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.open;
 
