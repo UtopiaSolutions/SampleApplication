@@ -1,5 +1,7 @@
-package com.tests.withPages;
+package com.tests.withPages.google;
 
+import com.tests.withPages.google.pages.GooglePage;
+import com.tests.withPages.google.pages.SearchResultsPage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
@@ -23,7 +25,7 @@ public class GoogleTest extends BaseUITest {
         SearchResultsPage results = page.searchFor(searchKeyword);
 
         results.checkResultsSize(1);
-        results.getResults().get(0).shouldHave(text("Selenide: concise UI tests in Java"));
-        log.info("The search text was {} exists in Selenide: concise UI tests in Java",searchKeyword);
+        results.getResults().get(0).shouldHave(text("Selenide: concise UI fakeUsers in Java"));
+        log.info("The search text was {} exists in Selenide: concise UI fakeUsers in Java",searchKeyword);
     }
 }
