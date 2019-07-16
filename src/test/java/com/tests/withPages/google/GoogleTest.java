@@ -2,6 +2,7 @@ package com.tests.withPages.google;
 
 import com.tests.withPages.google.pages.GooglePage;
 import com.tests.withPages.google.pages.SearchResultsPage;
+import com.usf.utils.reporting.ExtentTestManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
@@ -17,6 +18,7 @@ public class GoogleTest extends BaseUITest {
 
     @Test
     public void userCanSearch() {
+        ExtentTestManager.startTest("Test1", "Test Test");
         String searchKeyword = "selenide";
 
         GooglePage page = open("https://google.com/ncr", GooglePage.class);

@@ -2,6 +2,7 @@ package com.tests;
 
 import com.usf.metadata.Metadata;
 import com.usf.utils.parsers.Parser;
+import com.usf.utils.reporting.ExtentTestManager;
 import org.testng.annotations.Test;
 import test.BaseUITest;
 
@@ -15,6 +16,7 @@ public class NewFeaturesTest extends BaseUITest {
 
     @Test
     public void featureTest(){
+        ExtentTestManager.startTest("Test2", "TestToo");
         Parser parser = new Parser(getConfigValue("metadata-path"), "metadata.xml");
 
         parser.parseFile();
