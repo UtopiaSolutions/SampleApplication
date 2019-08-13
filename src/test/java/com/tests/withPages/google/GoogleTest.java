@@ -15,7 +15,7 @@ public class GoogleTest extends BaseUITest {
 
     private final Logger log = LoggerFactory.getLogger(GoogleTest.class);
 
-    @Test
+    @Test(testName = "Test 1", description = "User Search")
     public void userCanSearch() {
         String searchKeyword = "selenide";
 
