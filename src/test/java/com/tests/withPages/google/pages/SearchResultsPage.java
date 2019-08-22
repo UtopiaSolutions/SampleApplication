@@ -1,6 +1,7 @@
 package com.tests.withPages.google.pages;
 
 import com.codeborne.selenide.ElementsCollection;
+import org.openqa.selenium.By;
 import org.openqa.selenium.support.FindBy;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,7 +13,7 @@ public class SearchResultsPage {
 
     private final Logger log = LoggerFactory.getLogger(SearchResultsPage.class);
 
-    @FindBy(css = "#ires .g")
+    @FindBy(className = "g")
     private ElementsCollection results;
 
     public void checkResultsSize(int expectedSize) {

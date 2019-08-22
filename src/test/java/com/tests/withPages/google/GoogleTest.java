@@ -7,6 +7,8 @@ import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
 import test.BaseUITest;
 
+import java.util.Properties;
+
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.open;
 
@@ -17,6 +19,7 @@ public class GoogleTest extends BaseUITest {
 
     @Test(testName = "Test 1", description = "User Search")
     public void userCanSearch() {
+
         String searchKeyword = "selenide";
 
         GooglePage page = open("https://google.com/ncr", GooglePage.class);
@@ -25,7 +28,7 @@ public class GoogleTest extends BaseUITest {
         SearchResultsPage results = page.searchFor(searchKeyword);
 
         results.checkResultsSize(1);
-        results.getResults().get(0).shouldHave(text("Selenide: concise UI fakeUsers in Java"));
-        log.info("The search text was {} exists in Selenide: concise UI fakeUsers in Java",searchKeyword);
+        results.getResults().get(0).shouldHave(text("Selenide: concise UI tests in Java"));
+        log.info("The search text was {} exists in Selenide: concise UI tests in Java",searchKeyword);
     }
 }

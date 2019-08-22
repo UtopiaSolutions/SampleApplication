@@ -7,8 +7,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Reporter;
 
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.page;
+import static com.codeborne.selenide.Selenide.*;
 
 public class SFCommon {
 
@@ -21,7 +20,6 @@ public class SFCommon {
 
     public SFContactsPage clickContactsLink(){
         $(contactsLink).waitUntil(Condition.appear, 3000);
-
         contactsLink.sendKeys(Keys.ENTER);
         Reporter.log("Clicked Contacts Tab");
         return page(SFContactsPage.class);

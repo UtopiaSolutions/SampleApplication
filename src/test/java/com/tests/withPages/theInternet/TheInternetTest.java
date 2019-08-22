@@ -17,7 +17,6 @@ import static com.codeborne.selenide.Selenide.open;
 public class TheInternetTest extends BaseUITest {
 
     private final Logger log = LoggerFactory.getLogger(TheInternetTest.class);
-
     @Test(dataProvider = "Authentication", description = "This is not a valid test. This is used for demonstration of the Selenide framework.", groups = "Hemant")
     public void invalidAuthenticationWithRandomData(String name, String password) {
 
